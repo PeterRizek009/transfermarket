@@ -1,0 +1,39 @@
+
+
+.react-bootstrap-table {
+ background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+ border: none;
+  z-index: 2;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 5px;
+  box-shadow: 0 0 20px rgba(11, 2, 2, 0.8);
+}
+
+.react-bootstrap-table
+thead,
+td {
+  text-align: center;
+  padding: 5px;
+  background-color: rgba(90, 88, 88, 0.815);
+  color: #fff;
+  border: none;
+}
+
+thead th {
+  background-color: #55608f;
+  border: 0px;
+}
+
+
+.react-bootstrap-table
+tbody,
+tr {
+  text-align: center;
+  color: #fff;
+  border: none;
+}
+
+.bookmark {
+  cursor: pointer;
+}
