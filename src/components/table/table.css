@@ -1,11 +1,10 @@
 
 
 .react-bootstrap-table {
- background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+ background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
  border: none;
   z-index: 2;
   border-radius: 10px;
-  padding: 5px;
   margin-bottom: 5px;
   box-shadow: 0 0 20px rgba(11, 2, 2, 0.8);
 }
@@ -14,8 +13,8 @@
 thead,
 td {
   text-align: center;
-  padding: 5px;
-  background-color: rgba(90, 88, 88, 0.815);
+  padding: 10px 1px;
+  background-color: rgba(116, 112, 112, 0.815);
   color: #fff;
   border: none;
 }
@@ -23,6 +22,7 @@ td {
 thead th {
   background-color: #55608f;
   border: 0px;
+  padding: 20px 0;
 }
 
 

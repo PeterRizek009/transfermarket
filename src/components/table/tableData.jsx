@@ -2,14 +2,11 @@ import { React, useState } from 'react';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import BootstrapTable from 'react-bootstrap-table-next';
 import './table.css'
+import Searchform from './../searchform/Searchform';
 
 const TableData = ({ transferData }) => {
 
     const [selected, setSelected] = useState([])
-
-
-
-
 
     const handleOnSelect = (row, isSelect) => {
         if (isSelect) {
@@ -19,7 +16,7 @@ const TableData = ({ transferData }) => {
         }
     }
 
-    console.log(selected);
+
     const selectRow = {
         mode: 'checkbox',
         clickToSelect: true,
@@ -52,7 +49,9 @@ const TableData = ({ transferData }) => {
     return (
         <>
             <div className="w-100 mt-5 mx-auto container">
+                
                 <BootstrapTable keyField='id' data={transferData} columns={columns} selectRow={selectRow} pagination={paginationFactory()} />
+
             </div>
         </>
     );

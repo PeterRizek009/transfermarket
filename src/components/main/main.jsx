@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from 'react';
-import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TableData from '../table/tableData';
+import Searchform from '../searchform/Searchform';
 import './main.css'
 
 
@@ -42,17 +42,7 @@ const Main = () => {
   return (
     <>
       <div>
-        <Form.Select className='select w-50 mx-auto mt-5' value={league} onChange={handleChange} aria-label="Default select example">
-          <option>Select the league</option>
-          <option value={"en"}>England - Premier League</option>
-          <option value={"es"}>Spain -La Liga</option>
-          <option value={"de"}>Germany -Bundesliga</option>
-          <option value={"it"}>Italy -Serie A</option>
-          <option value={"fr"}>France -Ligue 1</option>
-          <option value={"pt"}>Portugal -Liga</option>
-          <option value={"nl"}>Netherland - Eredivisie</option>
-        </Form.Select>
-
+         <Searchform league={league} handleChange={handleChange} />
         <TableData transferData={transferData} />
       </div>
     </>
