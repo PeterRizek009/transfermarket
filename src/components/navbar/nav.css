@@ -1,0 +1,93 @@
+/* Navbar  */
+
+.navbar-dark {
+  background-color: rgba(0, 0, 0, 0.598);
+}
+.navbar-dark .nav-item .nav-link {
+  color: #fff;
+}
+
+.navbar-dark .nav-item .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  border-radius: 0.25rem;
+  color: #fff;
+}
+
+/* Navbar logo */
+.navbar-brand {
+  transition: 0.5s color ease-in-out;
+}
+
+.navbar-brand span {
+  margin: 0 3px;
+  animation: tracking-in-expand;
+  animation-duration: 5s;
+}
+.navbar-brand:hover span {
+  color: chartreuse;
+}
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* end of Navbar logo */
+
+/* Navbar toggler button */
+.navbar-dark .navbar-toggler {
+  color: white;
+  border-color: white;
+  border: none;
+  transition: 0.5s ease-in-out;
+}
+.navbar-dark .navbar-toggler:hover{
+  scale: 1.2;
+}
+
+.custom-toggler i {
+  color: whitesmoke;
+  transition: 0.2s ease-in-out;
+}
+
+.custom-toggler i:hover {
+  transform: scale(1.2);
+}
+
+
+/* end of Navbar toggler button */
+
+.search-bar{
+  width: 400px;
+  margin-left: 500px;
+}
+
+@media screen and (min-width: 480px) and (max-width: 950px) {
+  .search-bar{
+    width: 350px;
+    margin: 5px;
+  }
+}

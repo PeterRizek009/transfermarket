@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import TableData from '../table/tableData';
 import Searchform from '../searchform/Searchform';
 import './main.css'
+import Navbar from '../navbar/nav';
+import Footer from '../footer/footer';
 
 
 const Main = () => {
@@ -42,8 +44,10 @@ const Main = () => {
   return (
     <>
       <div>
+        <Navbar transferData={transferData} setTransferData={setTransferData}/>
          <Searchform league={league} handleChange={handleChange} />
         <TableData transferData={transferData} />
+        <Footer/>
       </div>
     </>
   );

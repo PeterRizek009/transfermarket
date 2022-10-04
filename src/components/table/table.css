@@ -1,20 +1,18 @@
-
-
 .react-bootstrap-table {
- background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
- border: none;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  border: none;
   z-index: 2;
+  font-size: 1.2em;
+  min-width: 100%;
   border-radius: 10px;
   margin-bottom: 5px;
   box-shadow: 0 0 20px rgba(11, 2, 2, 0.8);
 }
 
-.react-bootstrap-table
-thead,
+.react-bootstrap-table thead,
 td {
   text-align: center;
-  padding: 10px 1px;
-  background-color: rgba(116, 112, 112, 0.815);
+  background-color: rgba(122, 122, 122, 0.815);
   color: #fff;
   border: none;
 }
@@ -25,9 +23,7 @@ thead th {
   padding: 20px 0;
 }
 
-
-.react-bootstrap-table
-tbody,
+.react-bootstrap-table tbody,
 tr {
   text-align: center;
   color: #fff;
@@ -36,4 +32,29 @@ tr {
 
 .bookmark {
   cursor: pointer;
+}
+
+.header-class th {
+  transition: 0.2s color ease-in-out;
+  cursor: pointer;
+  padding-right: 10px;
+}
+.header-class th:hover {
+  color: black;
+}
+.react-bootstrap-table-sort-order {
+  margin: 0 5px;
+  color: black;
+}
+
+.page-item .page-link{
+  margin: 0 2px;
+  color: gray;
+  border-radius: 5px;
+}
+
+.page-item.active .page-link {
+  background-color: gray;
+  color: #fff;
+  border-color: rgb(139, 138, 138);
 }
