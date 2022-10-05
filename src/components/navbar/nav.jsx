@@ -5,20 +5,20 @@ import { Link } from "react-router-dom";
 
 const Navbar = ({ transferData, setTransferData }) => {
 
-  const [term, setTerm] = useState(' ')
- 
+  const [term, setTerm] = useState('')
+
+  const search = () => {
+    if (term) {
+      const result = transferData.filter((el) => (el.player).includes(term))
+      setTransferData(result)
+    } else {
+      setTransferData(transferData)
+    }
+  }
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      if(term){
-        const result = transferData.filter((el) => (el.player).includes(term))
-        setTransferData(result)
-      }else{
-        setTransferData(transferData)
-      }
-      
-     
-
+      search();
     }, 1600);
     return () => clearTimeout(timeout)
   }, [term])
@@ -48,7 +48,7 @@ const Navbar = ({ transferData, setTransferData }) => {
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" href="#" tabIndex={-1} aria-disabled="true">Saved Searches</Link>
+                <Link className="nav-link"  to={"/savedtransfers"}>Saved Transfers</Link>
               </li>
             </ul>
 
@@ -57,7 +57,7 @@ const Navbar = ({ transferData, setTransferData }) => {
                 onChange={(e) => setTerm(e.target.value)}
                 value={term}
                 placeholder="Search by Player name only"
-                aria-label="Search" />     
+                aria-label="Search" />
             </form>
           </div>
         </div>

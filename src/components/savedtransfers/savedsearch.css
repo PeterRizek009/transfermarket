@@ -1,0 +1,14 @@
+.title{
+    text-transform: uppercase;
+    color: aliceblue;
+
+}
+
+.title span{
+    color: greenyellow;
+    margin-right: 10px;
+}
+
+.title::after{
+    border: 2px solid white;
+}

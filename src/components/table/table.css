@@ -1,3 +1,7 @@
+.container {
+  min-height: 75vh;
+}
+
 .react-bootstrap-table {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   border: none;
@@ -5,7 +9,7 @@
   font-size: 1.2em;
   min-width: 100%;
   border-radius: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   box-shadow: 0 0 20px rgba(11, 2, 2, 0.8);
 }
 
@@ -21,6 +25,7 @@ thead th {
   background-color: #55608f;
   border: 0px;
   padding: 20px 0;
+  border: none;
 }
 
 .react-bootstrap-table tbody,
@@ -47,7 +52,7 @@ tr {
   color: black;
 }
 
-.page-item .page-link{
+.page-item .page-link {
   margin: 0 2px;
   color: gray;
   border-radius: 5px;
