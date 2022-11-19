@@ -2,6 +2,11 @@
 
 .navbar-dark {
   background-color: rgba(0, 0, 0, 0.598);
+  box-shadow: 0px 0px 15px rgb(0 0 0 / 10%);
+  border-radius: 40px;
+  min-height: 80px;
+  max-width: 75%;
+  margin: 20px auto;
 }
 .navbar-dark .nav-item .nav-link {
   color: #fff;
@@ -28,8 +33,9 @@
   color: chartreuse;
 }
 .tracking-in-expand {
-	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 @-webkit-keyframes tracking-in-expand {
   0% {
@@ -64,7 +70,7 @@
   border: none;
   transition: 0.5s ease-in-out;
 }
-.navbar-dark .navbar-toggler:hover{
+.navbar-dark .navbar-toggler:hover {
   scale: 1.2;
 }
 
@@ -77,17 +83,21 @@
   transform: scale(1.2);
 }
 
-
 /* end of Navbar toggler button */
 
-.search-bar{
+.search-bar {
   width: 400px;
-  margin-left: 500px;
+  margin-left: 160px;
 }
 
-@media screen and (min-width: 480px) and (max-width: 950px) {
-  .search-bar{
-    width: 350px;
+@media screen and (min-width: 480px) and (max-width: 1200px) {
+  .navbar-dark {
+    max-width: 85%;
+    margin: 20px auto;
+  }
+
+  .search-bar {
+    width: 280px;
     margin: 5px;
   }
 }
