@@ -1,5 +1,5 @@
 .container {
-  min-height: 75vh;
+  min-height: 100%;
 }
 
 .react-bootstrap-table {
@@ -19,12 +19,13 @@ td {
   background-color: rgba(122, 122, 122, 0.815);
   color: #fff;
   border: none;
+  
 }
 
 thead th {
   background-color: #55608f;
   border: 0px;
-  padding: 20px 0;
+  padding: 10px 0;
   border: none;
 }
 
@@ -62,4 +63,11 @@ tr {
   background-color: gray;
   color: #fff;
   border-color: rgb(139, 138, 138);
+}
+
+@media screen and (min-width: 480px) and (max-width: 950px) {
+  .react-bootstrap-table {
+    font-size: 1em;
+    min-width: 100%;
+  }
 }

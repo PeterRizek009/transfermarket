@@ -56,7 +56,7 @@ function App() {
     <div className="App">
       <Navbar transferData={transferData} setTransferData={setTransferData} />
       <Routes>
-        <Route path="/home" element={<Main league={league} handleChange={handleChange}
+        <Route path="/" element={<Main league={league} handleChange={handleChange}
           transferData={transferData} handleOnSelect={handleOnSelect} selected={selected} setSelected={setSelected} />} />
         <Route path="/about" element={<About />} />
         <Route path="/savedtransfers" element={<Savedtransfers selected={selected}  transferData={transferData}/>} />
