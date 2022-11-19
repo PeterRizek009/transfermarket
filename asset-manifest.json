@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/transfermarket/static/css/main.a8b94664.css",
+    "main.js": "/transfermarket/static/js/main.97251c0b.js",
+    "static/js/787.d9dcd69e.chunk.js": "/transfermarket/static/js/787.d9dcd69e.chunk.js",
+    "static/media/bg3.jpg": "/transfermarket/static/media/bg3.f87f4ffb6ff5ea9311ab.jpg",
+    "index.html": "/transfermarket/index.html",
+    "main.a8b94664.css.map": "/transfermarket/static/css/main.a8b94664.css.map",
+    "main.97251c0b.js.map": "/transfermarket/static/js/main.97251c0b.js.map",
+    "787.d9dcd69e.chunk.js.map": "/transfermarket/static/js/787.d9dcd69e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a8b94664.css",
+    "static/js/main.97251c0b.js"
+  ]
+}
