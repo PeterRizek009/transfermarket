@@ -65,7 +65,7 @@ tr {
   border-color: rgb(139, 138, 138);
 }
 
-@media screen and (min-width: 480px) and (max-width: 950px) {
+@media screen and (max-width: 600px) {
   .react-bootstrap-table {
     font-size: 1em;
     min-width: 100%;

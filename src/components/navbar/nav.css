@@ -90,14 +90,14 @@
   margin-left: 160px;
 }
 
-@media screen and (min-width: 480px) and (max-width: 1200px) {
+@media screen and  (max-width: 600px) {
   .navbar-dark {
-    max-width: 85%;
+    max-width: 90%;
     margin: 20px auto;
   }
 
   .search-bar {
-    width: 280px;
+    width: 250px;
     margin: 5px;
   }
 }
