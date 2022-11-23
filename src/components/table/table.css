@@ -68,6 +68,6 @@ tr {
 @media screen and (max-width: 600px) {
   .react-bootstrap-table {
     font-size: 1em;
-    min-width: 100%;
+    max-width: 70%;
   }
 }
