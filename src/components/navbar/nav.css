@@ -90,7 +90,7 @@
   margin-left: 160px;
 }
 
-@media screen and  (max-width: 600px) {
+@media screen and  (max-width: 1200px) {
   .navbar-dark {
     max-width: 90%;
     margin: 20px auto;
@@ -101,3 +101,4 @@
     margin: 5px;
   }
 }
+

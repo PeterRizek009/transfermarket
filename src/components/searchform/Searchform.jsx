@@ -6,7 +6,7 @@ const Searchform = ({ league, handleChange }) => {
 
     return (
         <div>
-            <Form.Select className='select px-3 py-2' value={league} onChange={handleChange} aria-label="Default select example">
+            <Form.Select className='select px-5 py-2' value={league} onChange={handleChange} aria-label="Default select example">
                 <option >Select the league</option>
                 <option value={"en"} >England - Premier League</option>
                 <option value={"es"}>Spain -La Liga</option>
