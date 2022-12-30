@@ -1,25 +1,16 @@
-import React , {useEffect , useState } from "react";
+import React , {useState , useEffect}from "react";
 import BootstrapTable from 'react-bootstrap-table-next';
 import './../table/table.css';
 import './savedsearch.css'
 
-const Savedtransfers = ({ transferData ,selected }) => {
+const Savedtransfers = ({transferData , selected }) => {
 
-     const [savedData , SetSavedData] = useState([]);
-       
-        const search = () => {
-            const data = transferData.filter((el, index) => selected[index] === el.id)
-            SetSavedData(data)
-          }
+   
+    let  selectedData = (transferData.filter((el, index) => el.id === selected[index]));
 
 
-        useEffect(() => {
-            const timeout = setTimeout(() => {
-              search();
-            }, 1600);
-            return () => clearTimeout(timeout)
-          }, [selected])
-     
+    
+   
 
     const columns = [{
         dataField: 'date',
@@ -42,11 +33,14 @@ const Savedtransfers = ({ transferData ,selected }) => {
     }
 
     ];
-    return (<>
+
+
+    return (
+    <>
         <h1 className="text-center mt-5 title"><span>Saved</span>Transfers</h1>
         <div className="w-100 mt-5 mx-auto container">
-            <BootstrapTable keyField='id' data={savedData}
-                columns={columns} />
+            <BootstrapTable keyField='id' 
+                columns={columns} data={selectedData}/>
         </div>
     </>);
 }

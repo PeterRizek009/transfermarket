@@ -4,7 +4,7 @@ import BootstrapTable from 'react-bootstrap-table-next';
 import './table.css'
 
 
-const TableData = ({ transferData, selected, handleOnSelect }) => {
+const TableData = ({ transferData, selected, handleOnSelect, isLoading }) => {
 
     const selectRow = {
         mode: 'checkbox',
@@ -39,8 +39,12 @@ const TableData = ({ transferData, selected, handleOnSelect }) => {
     return (
         <>
             <div className="w-100 mt-5 mx-auto container">
-                <BootstrapTable keyField='id' data={transferData}
-                    columns={columns} selectRow={selectRow} pagination={paginationFactory()} />
+                {isLoading ?
+                    <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                    :
+                    <BootstrapTable keyField='id' data={transferData}
+                        columns={columns} selectRow={selectRow} pagination={paginationFactory()} />
+                }
             </div>
         </>
     );

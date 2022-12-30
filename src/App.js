@@ -14,13 +14,16 @@ function App() {
   const [league, setLeague] = useState("");
   const [selected, setSelected] = useState([])
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleOnSelect = (row, isSelect) => {
+    
     if (isSelect) {
       setSelected([...selected, row.id]);
     } else {
       setSelected([...selected.filter(item => item !== row.id)])
     }
-    console.log(selected);
+     
   }
   transferData.forEach((item, i) => {
     item.id = i + 1;
@@ -32,6 +35,7 @@ function App() {
   };
 
   const getData = async () => {
+    setIsLoading(true);
     await axios.get(`https://soccer-transfers.p.rapidapi.com/${league}`,
       {
         headers: {
@@ -41,6 +45,7 @@ function App() {
       })
       .then((response) => {
         setTransferData(response.data)
+        setIsLoading(false);
       })
       .catch((err) => console.log(err));
   }
@@ -52,14 +57,19 @@ function App() {
     }, 1200);
   }, [league]);
 
+
+  
+  
+ 
+ 
   return (
     <div className="App">
       <Navbar transferData={transferData} setTransferData={setTransferData} />
       <Routes>
         <Route path="/" element={<Main league={league} handleChange={handleChange}
-          transferData={transferData} handleOnSelect={handleOnSelect} selected={selected} setSelected={setSelected} />} />
+          transferData={transferData} handleOnSelect={handleOnSelect} selected={selected} setSelected={setSelected} isLoading={isLoading}/>} />
         <Route path="/about" element={<About />} />
-        <Route path="/savedtransfers" element={<Savedtransfers selected={selected}  transferData={transferData}/>} />
+        <Route path="/savedtransfers" element={<Savedtransfers selected={selected} transferData={transferData} />} />
       </Routes>
       <Footer />
     </div>

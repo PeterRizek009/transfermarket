@@ -10,6 +10,7 @@
 }
 .navbar-dark .nav-item .nav-link {
   color: #fff;
+  
 }
 
 .navbar-dark .nav-item .nav-link:hover {
@@ -86,8 +87,8 @@
 /* end of Navbar toggler button */
 
 .search-bar {
-  width: 400px;
-  margin-left: 160px;
+  width: 300px;
+  margin-left: 180px;
 }
 
 @media screen and  (max-width: 1200px) {
