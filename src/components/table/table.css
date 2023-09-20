@@ -1,162 +1,21 @@
 .container {
-  min-height: 80vh;
-}
-
-.react-bootstrap-table {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-  border: none;
-  z-index: 2;
-  font-size: 1.2em;
-  min-width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  box-shadow: 0 0 20px rgba(11, 2, 2, 0.8);
-}
-
-.react-bootstrap-table thead,
-td {
-  text-align: center;
-  background-color: rgba(122, 122, 122, 0.815);
-  color: #fff;
-  border: none;
+  height: 100%;
   
 }
 
-thead th {
-  background-color: #55608f;
-  border: 0px;
-  padding: 10px 0;
-  border: none;
-}
-
-.react-bootstrap-table tbody,
-tr {
+table{
+  background-color: whitesmoke;
+  padding: 10px;
+  position: relative;
   text-align: center;
-  color: #fff;
-  border: none;
+  border-radius: 1%;
+  border: 1px solid black;
 }
+table th
 
-.bookmark {
-  cursor: pointer;
-}
-
-.header-class th {
-  transition: 0.2s color ease-in-out;
-  cursor: pointer;
-  padding-right: 10px;
-}
-.header-class th:hover {
+table td {
+  padding: 2px;
   color: black;
-}
-.react-bootstrap-table-sort-order {
-  margin: 0 5px;
-  color: black;
-}
-
-.page-item .page-link {
-  margin: 0 2px;
-  color: gray;
-  border-radius: 5px;
-}
-
-.page-item.active .page-link {
-  background-color: gray;
-  color: #fff;
-  border-color: rgb(139, 138, 138);
-}
-
-@media screen and (max-width: 500px) {
-  .react-bootstrap-table {
-    font-size: 0.8em;
-    width: 75%;
-  }
-}
-
-
-
-
-.lds-roller {
-  display: inline-block;
-  position: absolute;
-  left: 50%;
-  margin-top: 80px;
-}
-.lds-roller div {
-  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  transform-origin: 40px 40px;
-}
-.lds-roller div:after {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #fff;
-  margin: -4px 0 0 -4px;
-}
-.lds-roller div:nth-child(1) {
-  animation-delay: -0.036s;
-}
-.lds-roller div:nth-child(1):after {
-  top: 63px;
-  left: 63px;
-}
-.lds-roller div:nth-child(2) {
-  animation-delay: -0.072s;
-}
-.lds-roller div:nth-child(2):after {
-  top: 68px;
-  left: 56px;
-}
-.lds-roller div:nth-child(3) {
-  animation-delay: -0.108s;
-}
-.lds-roller div:nth-child(3):after {
-  top: 71px;
-  left: 48px;
-}
-.lds-roller div:nth-child(4) {
-  animation-delay: -0.144s;
-}
-.lds-roller div:nth-child(4):after {
-  top: 72px;
-  left: 40px;
-}
-.lds-roller div:nth-child(5) {
-  animation-delay: -0.18s;
-}
-.lds-roller div:nth-child(5):after {
-  top: 71px;
-  left: 32px;
-}
-.lds-roller div:nth-child(6) {
-  animation-delay: -0.216s;
-}
-.lds-roller div:nth-child(6):after {
-  top: 68px;
-  left: 24px;
-}
-.lds-roller div:nth-child(7) {
-  animation-delay: -0.252s;
-}
-.lds-roller div:nth-child(7):after {
-  top: 63px;
-  left: 17px;
-}
-.lds-roller div:nth-child(8) {
-  animation-delay: -0.288s;
-}
-.lds-roller div:nth-child(8):after {
-  top: 56px;
-  left: 12px;
-}
-@keyframes lds-roller {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  border: 1px solid gainsboro;
 }
 

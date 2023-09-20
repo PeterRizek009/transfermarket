@@ -1,50 +1,42 @@
 import { React } from 'react';
-import paginationFactory from 'react-bootstrap-table2-paginator';
-import BootstrapTable from 'react-bootstrap-table-next';
 import './table.css'
 
 
-const TableData = ({ transferData, selected, handleOnSelect, isLoading }) => {
+const TableData = ({ transferData }) => {
 
-    const selectRow = {
-        mode: 'checkbox',
-        clickToSelect: true,
-        selected: selected,
-        onSelect: handleOnSelect
-    };
-
-    const columns = [{
-        dataField: 'date',
-        text: 'Date',
-        sort: true
-    }, {
-        dataField: 'player',
-        text: 'Player Name',
-        sort: true
-
-    }, {
-        dataField: 'from',
-        text: 'Previous Club',
-        sort: true
-
-    }, {
-        dataField: 'to',
-        text: 'New Club',
-        sort: true
-
-    }
-
-    ];
 
     return (
         <>
             <div className="w-100 mt-5 mx-auto container">
-                {isLoading ?
-                    <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-                    :
-                    <BootstrapTable keyField='id' data={transferData}
-                        columns={columns} selectRow={selectRow} pagination={paginationFactory()} />
-                }
+                <table className='table'>
+                    <thead>
+                        <tr>
+                            <th>Player</th>
+                            
+                            <th>Left</th>
+                            <th>Joined</th>
+                            <th>Fees with k</th>
+                            <th>Season</th>
+                        </tr>
+                    </thead>
+                    {transferData?.map((player) => (
+                        <tr key={player.id}>
+                            <td>{player.id}</td>
+                            <td>
+                            {player.fromClubID}
+                            </td>
+                            <td> 
+                            {player.toClubID}
+                            </td>
+                           <td>{player.transferFee.value / 1000} $</td> 
+                           <td>{player.season}</td> 
+                        </tr>
+                    ))}
+
+                </table>
+
+
+
             </div>
         </>
     );
